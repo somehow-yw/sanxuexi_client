@@ -11,22 +11,6 @@
                     </div>
             </i-col>
         </Row>
-        <!-- <Row type="flex">
-            <asidebar :spanLeft="spanLeft"></asidebar>
-            <i-col :span="spanRight" :iconSize="iconSize">
-                <div class="layout-header">
-                    <i-button type="text" @click="toggleClick">
-                        <Icon type="navicon" size="32"></Icon>
-                    </i-button>
-                </div>
-                <div class="layout-content">
-                    <div class="layout-content-main"><router-view></router-view></div>
-                     <footerbar></footerbar>
-                </div>
-               
-            </i-col>
-        </Row> -->
-
         </template>
 
         <template v-else>

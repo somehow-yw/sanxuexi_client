@@ -1,6 +1,6 @@
 <template>
   <div class="layout-copy">
-    2017-2017 &copy; 图书信息管理系统
+    三月兮 &copy; 你一个人的世界
   </div>
 </template>
 

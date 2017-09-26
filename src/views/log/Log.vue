@@ -2,13 +2,13 @@
     <div>
         <div class="layout-breadcrumb">
             <Breadcrumb>
-                <Breadcrumb-item href="#/">首页</Breadcrumb-item>
-                <Breadcrumb-item>公告管理</Breadcrumb-item>
+                <Breadcrumb-item href="/">首页</Breadcrumb-item>
+                <Breadcrumb-item>日志列表</Breadcrumb-item>
             </Breadcrumb>
         </div>
     
 
-    
+    <!-- 添加日志的弹窗 -->
         <Modal v-model="modal1" title="添加公告" width="980">
             <div slot="footer">
                 Tip:添加公告!
@@ -28,15 +28,15 @@
             </Form>
         </Modal>
         <Row>
-            <Col span="3">
+            <!-- <Col span="3">
                 <cate-tree :type="1" :selectChange="selectChange"></cate-tree>
-            </Col>
-            <Col span="21">
+            </Col> -->
+            <Col span="24">
                 <div class="btns">
-                    <Button type="info" @click="modal1 = true">添加数据</Button>
-                    <Button type="error" @click="removes">删除数据</Button>
-                    <Input icon="search" v-model="filter.name" placeholder="请输入..." style="width: 200px"></Input>
-                    <Button type="ghost" @click="search">搜索数据</Button>
+                    <Button type="info" icon="edit" @click="addNote">写日志</Button>
+                   <!--  <Button type="error" @click="removes">删除数据</Button> -->
+                    <!-- <Input icon="search" v-model="filter.name" placeholder="请输入..." style="width: 200px"></Input>
+                    <Button type="ghost" @click="search">搜索数据</Button> -->
                 </div>
                 <Table border :context="self" :columns="columns" :data="list" @on-selection-change="handlerSelectionChange"></Table>
         
@@ -133,6 +133,9 @@
                 }
                 this.filter.cateId = node[0]._id;
                 this.getData()
+            },
+            addNote () {
+                window.location.href = '#/note/addNote'
             }
         }
     }

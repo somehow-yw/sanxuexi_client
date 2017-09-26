@@ -38,7 +38,7 @@
                     <Icon type="person-stalker"></Icon>
                     朋友
                 </MenuItem></router-link>
-                <router-link to="/log">
+                <router-link to="/note">
                 <MenuItem name="3">
                     <Icon type="chatbubbles"></Icon>
                     日志

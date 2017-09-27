@@ -5,7 +5,7 @@ Vue.use(Vuex);
 
 export const store = new Vuex.Store({
   state: {
-    login: true,
+    login: false,
     userlogin: {
       tel: '',
       password: ''

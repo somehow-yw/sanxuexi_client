@@ -19,11 +19,12 @@
 	</div>
 </template>
 <script>
+var CryptoJS = require("crypto-js");
 	export default {
 		data () {
 			return {
 				logindata:{
-					name: 'ys',
+					name: 'yseeee',
 					password: 'ys123...'
 				},
 				registerdata: {
@@ -35,9 +36,13 @@
 		},
 		methods: {
 			loginIn () {
+				// var psd = CryptoJS.MD5(this.logindata, {asString: true}).toString();
+				var psd = CryptoJS.SHA1(this.logindata.password).toString();
+				console.log(this.logindata.password)
+				console.log('登录加密',psd);
 				var vm = this;
 				vm.$http({
-					url: 'http://localhost:3000/users/login',
+					url: '/users/login',
 					method: 'POST',
 					data: vm.logindata,
 					header: 'Accept:application/json'
@@ -48,9 +53,12 @@
 				})
 			},
 			registerIn () {
+				var psd = CryptoJS.SHA1(this.logindata.password).toString();
+				console.log(this.logindata.password)
+				console.log('注册加密',psd);
 				var vm = this;
 				vm.$http({
-					url: 'http://localhost:3000/users/data/',
+					url: '/users/data/',
 					method: 'POST',
 					data: vm.registerdata,
 					header: 'Accept:application/json'

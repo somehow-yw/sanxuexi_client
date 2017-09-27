@@ -137,6 +137,6 @@
          }
      },
      created() {
-         this.getData();
+        //  this.getData();
      }
  }

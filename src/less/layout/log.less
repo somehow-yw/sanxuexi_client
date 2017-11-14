@@ -1,0 +1,25 @@
+@txtColor: #0CBBF3;
+.btns {
+    padding: 10px;
+}
+.noteSimpleShow {
+    .oneNoteshow {
+        h4 {color: @txtColor;font-size: 18px;
+            white-space: nowrap;
+            word-wrap: normal;
+            overflow: hidden;
+            padding: 15px 0;
+            text-overflow: ellipsis;
+            width: 100%;}
+        .noteInfo{width: 660px;}
+        
+    }
+    .noteInfo{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+    }
+}
+.bottomBar{width: 660px;height: 20px;background: #fff;border-bottom: 1px solid @txtColor;}
+.pageBar{.ivu-page{float: right};margin-top: 20px;}

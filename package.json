@@ -5,8 +5,9 @@
   "author": "vane <chinavane_2008@163.com>",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --progress --colors --open --hot",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.pro.js --progress",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "axios": "^0.15.3",
